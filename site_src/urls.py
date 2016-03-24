@@ -14,9 +14,15 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+from django.conf.urls import include, url
 from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
+
+    #the user ur request if contins admin will be passed  into  the admin
     url(r'^admin/', admin.site.urls),
+    #the url reqquest from user if empty will be passed into the urls.py file under blogapp folder
+    #ie /blogapp/url.py
+    url(r'', include('blogapp.urls')),
 ]
