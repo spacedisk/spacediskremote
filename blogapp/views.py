@@ -18,11 +18,31 @@ thus posts are objects of Post and Post is an object of models in django DRM"""
 #we created a function (def) called post_list
 #that takes request and return a function render
 #this function will render (ie put together) our template named blog/post_list.html
-def post_list(request):
+def index(request):
     #return render(request, 'blogapp/post_list.html', {}) #return renderd blogapp/post_list.html to the request recieved
     #we created  posts as  variable or instance of class Post in models  
     #accessing ths function post.objects.filter()
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    #posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     #so request is everything we receive from the user via the Internet + template file 'blog/post_list.html'
     #{'posts': posts} is some things for the template to use while request is renederd vi
-    return render(request, 'blogapp/post_list.html', {'posts': posts})
+    return render(request, 'blogapp/index.html')
+
+def about(request):    
+   return render(request, 'blogapp/about.html')
+
+
+def subdiv(request):    
+	  return render(request, 'blogapp/subdivisions.html')
+
+
+def contact(request):    
+	  return render(request, 'blogapp/contact.html')
+
+
+def blog(request):  
+	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')  
+
+	return render(request, 'blogapp/blog.html', {'posts': posts})
+
+
+

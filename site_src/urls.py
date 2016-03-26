@@ -25,4 +25,10 @@ urlpatterns = [
     #the url reqquest from user if empty will be passed into the urls.py file under blogapp folder
     #ie /blogapp/url.py
     url(r'', include('blogapp.urls')),
+    url(r'about.html', include('blogapp.urls')),
+    url(r'index.html', include('blogapp.urls')),
+    url(r'subdivisions.html', include('blogapp.urls')),
+    url(r'contact.html', include('blogapp.urls')),
+    url(r'blog.html', include('blogapp.urls')),
+       
 ]
