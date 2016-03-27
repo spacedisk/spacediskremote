@@ -41,8 +41,9 @@ def contact(request):
 
 def blog(request):  
 	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')  
-
 	return render(request, 'blogapp/blog.html', {'posts': posts})
 
 
+def realdat(request):    
+	  return render(request, 'blogapp/realdat.html')
 

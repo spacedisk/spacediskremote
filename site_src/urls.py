@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'subdivisions.html', include('blogapp.urls')),
     url(r'contact.html', include('blogapp.urls')),
     url(r'blog.html', include('blogapp.urls')),
+    url(r'realdat.html', include('blogapp.urls')),
        
 ]

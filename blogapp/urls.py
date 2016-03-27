@@ -12,7 +12,9 @@ urlpatterns = [
     url(r'^index.html$', views.index, name='index'),
     url(r'^subdivisions.html$', views.subdiv, name='subdivisions'),
     url(r'^contact.html$', views.contact, name='contact'),
-    url(r'^blog.html$', views.blog, name='blog'),    
+    url(r'^blog.html$', views.blog, name='blog'), 
+    url(r'^realdat.html$', views.realdat, name='blog'), 
+
 ]
 
 
